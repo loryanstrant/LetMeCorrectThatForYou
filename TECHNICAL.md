@@ -2,7 +2,7 @@
 
 ## Architecture
 
-The site uses Astro 5 and emits static HTML to `dist/`. Corrections are schema-validated Markdown content under `src/content/corrections/`. The complete directory is present without JavaScript; a small progressive-enhancement script adds A–Z filtering, target highlighting, and clipboard links.
+The site uses Astro 7 and emits static HTML to `dist/`. Corrections are schema-validated Markdown content under `src/content/corrections/`. The complete directory is present without JavaScript; a small progressive-enhancement script adds A–Z filtering, target highlighting, and clipboard links.
 
 ## Local development
 
