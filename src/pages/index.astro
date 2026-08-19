@@ -18,6 +18,18 @@ const available = [...new Set(corrections.map(({ data }) => data.title.charAt(0)
     <AlphabetFilter available={available} total={corrections.length} />
     <div class="entries">{corrections.map(({ data }) => <CorrectionCard {...data} />)}</div>
   </section>
+  <section class="story-network" aria-labelledby="story-network-heading">
+    <div class="network-intro">
+      <p class="eyebrow">Further fieldwork</p>
+      <h2 id="story-network-heading">The “Get Your Story Straight” network</h2>
+      <p>If you’re going to say something, be right about it. This fellow independent resource covers another part of Microsoft’s story that deserves its own specialist paperwork.</p>
+    </div>
+    <a class="network-card" href="https://www.msrebrandregistry.com/" target="_blank" rel="noopener noreferrer">
+      <span class="network-name">The Rebrand Registry</span>
+      <span>Microsoft cloud product names, past and present, with the evidence behind every documented change.</span>
+      <span class="network-action">Inspect the registry <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></span>
+    </a>
+  </section>
   <div class="copy-status" aria-live="polite"></div>
   <script>
     document.querySelectorAll<HTMLButtonElement>('.copy-link').forEach((button) => button.addEventListener('click', async () => {
