@@ -1,0 +1,21 @@
+{
+  "name": "let-me-correct-that-for-you",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run validate && astro build",
+    "preview": "astro preview",
+    "validate": "node scripts/validate-content.mjs",
+    "test": "npm run build && playwright test"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.10",
+    "astro": "7.2.3",
+    "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}

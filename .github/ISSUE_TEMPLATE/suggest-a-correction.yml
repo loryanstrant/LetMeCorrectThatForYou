@@ -1,0 +1,43 @@
+name: Suggest a correction
+description: Tell us about a term that needs a polite correction
+title: "Suggestion: "
+labels: [suggestion]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping make terminology more precise. No code is required.
+  - type: input
+    id: correct
+    attributes:
+      label: Correct term
+      description: Preserve the exact spelling, spacing, and capitalisation.
+      placeholder: Clipchamp
+    validations: { required: true }
+  - type: textarea
+    id: incorrect
+    attributes:
+      label: Common incorrect versions
+      description: Put each exact version on its own line.
+      placeholder: ClipChamp
+    validations: { required: true }
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why might people be getting it wrong?
+      description: A concise explanation is ideal, but longer context is welcome.
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes:
+      label: Authoritative source
+      description: Link to a first-party page or reliable dictionary reference.
+      placeholder: https://example.com/product
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing corrections and open suggestions for this term.
+          required: true
+        - label: I preserved the exact casing and spacing of every example.
+          required: true

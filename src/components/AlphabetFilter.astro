@@ -1,0 +1,25 @@
+---
+interface Props { available: string[]; total: number; }
+const { available, total } = Astro.props;
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+---
+<div class="alphabet" aria-label="Filter corrections by first letter">
+  <button type="button" class="selected" data-letter="all" aria-pressed="true">All</button>
+  {letters.map((letter) => <button type="button" data-letter={letter} disabled={!available.includes(letter)} aria-pressed="false">{letter}</button>)}
+</div>
+<p class="filter-status" aria-live="polite"><strong>Showing all {total}</strong> <span>· Sorted A–Z</span></p>
+<div class="empty-state" hidden><strong>No corrections here yet.</strong><p>There aren’t any corrections beginning with <span></span> yet. <a href="https://github.com/loryanstrant/LetMeCorrectThatForYou/issues/new?template=suggest-a-correction.yml">Suggest one on GitHub</a>.</p></div>
+<script>
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('.alphabet button')];
+  const cards = [...document.querySelectorAll<HTMLElement>('.correction')];
+  const status = document.querySelector<HTMLElement>('.filter-status');
+  const empty = document.querySelector<HTMLElement>('.empty-state');
+  const applyFilter = (letter: string) => {
+    let visible = 0;
+    cards.forEach((card) => { const show = letter === 'all' || card.dataset.letter === letter; card.hidden = !show; if (show) visible++; });
+    buttons.forEach((button) => { const selected = button.dataset.letter === letter; button.classList.toggle('selected', selected); button.setAttribute('aria-pressed', String(selected)); });
+    if (status) status.innerHTML = letter === 'all' ? `<strong>Showing all ${visible}</strong> <span>· Sorted A–Z</span>` : `<strong>Showing ${visible}</strong> <span>· Letter ${letter}</span>`;
+    if (empty) { empty.hidden = visible !== 0; const target = empty.querySelector('span'); if (target) target.textContent = letter; }
+  };
+  buttons.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.letter || 'all')));
+</script>
