@@ -1,0 +1,26 @@
+---
+interface Source { label: string; url: string; }
+interface Props { title: string; anchor: string; incorrect: string[]; reasons: string[]; notes: string[]; sources: Source[]; }
+const { title, anchor, incorrect, reasons, notes, sources } = Astro.props;
+---
+<article id={anchor} class="correction" data-letter={title.charAt(0).toUpperCase()} data-title={title}>
+  <div class="term">
+    <span class="letter" aria-hidden="true">{title.charAt(0)}</span>
+    <div><p class="term-label">The correct term is</p><h3>{title}</h3></div>
+  </div>
+  <div class="details">
+    <section class="field" aria-labelledby={`${anchor}-incorrect`}>
+      <h4 id={`${anchor}-incorrect`}>Common incorrect versions</h4>
+      <ul class="wrong-list">{incorrect.map((item) => <li>{item}</li>)}</ul>
+    </section>
+    {reasons.length > 0 && <section class="field" aria-labelledby={`${anchor}-why`}>
+      <h4 id={`${anchor}-why`}>Why you might be doing it wrong</h4>
+      {reasons.map((reason) => <p>{reason}</p>)}
+    </section>}
+    {notes.map((note) => <aside class="note"><strong>A complicating note</strong><p>{note}</p></aside>)}
+    <div class="links">
+      <button class="copy-link" type="button" data-anchor={anchor}>Copy direct link</button>
+      {sources.map((source) => <a href={source.url}>{source.label} <span aria-hidden="true">↗</span></a>)}
+    </div>
+  </div>
+</article>
