@@ -18,6 +18,25 @@ const available = [...new Set(corrections.map(({ data }) => data.title.charAt(0)
     <AlphabetFilter available={available} total={corrections.length} />
     <div class="entries">{corrections.map(({ data }) => <CorrectionCard {...data} />)}</div>
   </section>
+  <section class="story-network" aria-labelledby="story-network-heading">
+    <div class="network-intro">
+      <p class="eyebrow">Further fieldwork</p>
+      <h2 id="story-network-heading">The “Get Your Story Straight” network</h2>
+      <p>If you’re going to say something, be right about it. These fellow independent resources cover the parts of Microsoft’s story that deserve their own specialist paperwork.</p>
+    </div>
+    <div class="network-links">
+      <a class="network-card" href="https://www.mscloudlogos.com/" target="_blank" rel="noopener noreferrer">
+        <span class="network-name">Microsoft Cloud Logos</span>
+        <span>Proper product logos, including historical versions and the visual evidence behind the identity crisis.</span>
+        <span class="network-action">Inspect the logos <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></span>
+      </a>
+      <a class="network-card" href="https://www.msrebrandregistry.com/" target="_blank" rel="noopener noreferrer">
+        <span class="network-name">The Rebrand Registry</span>
+        <span>Microsoft cloud product names, past and present, with the evidence behind every documented change.</span>
+        <span class="network-action">Inspect the registry <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></span>
+      </a>
+    </div>
+  </section>
   <div class="copy-status" aria-live="polite"></div>
   <script>
     document.querySelectorAll<HTMLButtonElement>('.copy-link').forEach((button) => button.addEventListener('click', async () => {
