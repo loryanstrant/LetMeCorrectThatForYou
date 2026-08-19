@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props { title?: string; description?: string; current?: 'corrections' | 'about'; }
 const { title = 'Let me correct that for you!', description = 'A polite place for painfully precise corrections.', current } = Astro.props;
 const pageTitle = title === 'Let me correct that for you!' ? title : `${title} Â· Let me correct that for you!`;
@@ -13,7 +15,6 @@ const pageTitle = title === 'Let me correct that for you!' ? title : `${title} Â
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
   <title>{pageTitle}</title>
-  <link rel="stylesheet" href="/src/styles/global.css" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
