@@ -34,9 +34,12 @@ test('has no horizontal overflow at 380px', async ({ page }) => {
   expect(dimensions.scroll).toBeLessThanOrEqual(dimensions.client);
 });
 
-test('links to The Rebrand Registry as part of the network', async ({ page }) => {
+test('links to both fellow Get Your Story Straight sites', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: 'The “Get Your Story Straight” network' })).toBeVisible();
+  const logos = page.getByRole('link', { name: /Microsoft Cloud Logos/ });
+  await expect(logos).toHaveAttribute('href', 'https://www.mscloudlogos.com/');
+  await expect(logos).toHaveAttribute('target', '_blank');
   const registry = page.getByRole('link', { name: /The Rebrand Registry/ });
   await expect(registry).toHaveAttribute('href', 'https://www.msrebrandregistry.com/');
   await expect(registry).toHaveAttribute('target', '_blank');
