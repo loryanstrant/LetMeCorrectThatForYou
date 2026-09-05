@@ -15,6 +15,8 @@ const pageTitle = title === 'Let me correct that for you!' ? title : `${title} Â
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
   <title>{pageTitle}</title>
+    <!-- Visit counting: self-hosted, no cookies, no personal data. https://gitea.strant.casa/loryanstrant/Website-analytics -->
+    <script defer src="https://stats.strant.com/s.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
