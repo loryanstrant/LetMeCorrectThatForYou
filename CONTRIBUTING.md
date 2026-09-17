@@ -10,13 +10,14 @@ Open the [suggestion form](https://github.com/loryanstrant/LetMeCorrectThatForYo
 
 Corrections are Markdown files in `src/content/corrections/`. Copy an existing file and follow these rules:
 
-- Use a lowercase, stable filename, such as `powerbi.md`.
+- Use a lowercase, stable filename, such as `powerbi.md`. The `.md` extension is required — the content loader only picks up `**/*.md`, so an extensionless file is silently ignored.
 - `title` is the correct term and must preserve its exact casing and spacing.
 - `anchor` is the permanent direct-link ID. Never change a published anchor.
 - `incorrect` contains exact examples. Never normalise their casing; `ClipChamp` and `Clipchamp` are meaningfully different here.
 - `reasons` and `notes` are lists so entries can contain short or long explanations.
 - `sources` should link to authoritative first-party or dictionary references.
 - Keep the tone concise, useful, and playfully direct rather than abusive.
+- Add a matching entry to `scripts/content-manifest.json`. It is the guard against wording or anchors drifting after publication, and `npm run validate` fails if a correction is missing from it. Note the manifest key is `reason` (singular) where the frontmatter uses `reasons`.
 
 Install Node.js 22, then run:
 

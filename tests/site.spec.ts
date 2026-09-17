@@ -1,8 +1,11 @@
 import { test, expect } from '@playwright/test';
+import manifest from '../scripts/content-manifest.json' with { type: 'json' };
+
+const TOTAL = manifest.length;
 
 test('renders all corrections and filters by letter', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('.correction')).toHaveCount(17);
+  await expect(page.locator('.correction')).toHaveCount(TOTAL);
   await page.getByRole('button', { name: 'P', exact: true }).click();
   await expect(page.locator('.correction:visible')).toHaveCount(5);
   await expect(page.getByText('Showing 5')).toBeVisible();
@@ -22,7 +25,7 @@ test('remains complete without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   await page.goto('/#team');
-  await expect(page.locator('.correction')).toHaveCount(17);
+  await expect(page.locator('.correction')).toHaveCount(TOTAL);
   await expect(page.locator('#team')).toBeVisible();
   await context.close();
 });

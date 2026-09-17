@@ -1,9 +1,10 @@
 import { readFile, readdir } from 'node:fs/promises';
 const manifest = JSON.parse(await readFile(new URL('./content-manifest.json', import.meta.url)));
-const files = (await readdir(new URL('../src/content/corrections/', import.meta.url))).filter((file) => file.endsWith('.md'));
+const entries = (await readdir(new URL('../src/content/corrections/', import.meta.url))).filter((file) => !file.startsWith('.'));
+const files = entries.filter((file) => file.endsWith('.md'));
 const fail = (message) => { console.error(`○ ${message}`); process.exitCode = 1; };
-if (manifest.length !== 17) fail(`Expected 17 manifest entries; found ${manifest.length}.`);
-if (files.length !== manifest.length) fail(`Expected ${manifest.length} Markdown files; found ${files.length}.`);
+for (const stray of entries.filter((file) => !file.endsWith('.md'))) fail(`${stray} is not a .md file, so the content loader ignores it — rename it to ${stray}.md.`);
+if (files.length !== manifest.length) fail(`Expected ${manifest.length} Markdown files to match the manifest; found ${files.length}.`);
 const anchors = manifest.map(({ id }) => id);
 if (new Set(anchors).size !== anchors.length) fail('Manifest anchors are not unique.');
 for (const item of manifest) {
