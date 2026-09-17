@@ -15,7 +15,9 @@ permissions:
 
 jobs:
   build-and-deploy:
-    if: github.event_name == 'push' || github.event.action != 'closed'
+    # Gitea Actions also picks up .github/workflows, but has no Azure deployment token —
+    # skip there (github.server_url is the Gitea URL) and let .gitea/workflows/ci.yml gate it.
+    if: github.server_url == 'https://github.com' && (github.event_name == 'push' || github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and deploy
     steps:
@@ -30,7 +32,7 @@ jobs:
           output_location: dist
 
   close-preview:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    if: github.server_url == 'https://github.com' && github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close preview environment
     steps:

@@ -1,5 +1,22 @@
 [
   {
+    "title": "Agent 365",
+    "id": "agent365",
+    "incorrect": [
+      "Agent365"
+    ],
+    "reason": [
+      "I don't understand why you removed the space in the first place. Are there other Microsoft products without spaces between the name and the number? I'm not sure what's going on. How did we get here!?"
+    ],
+    "notes": [],
+    "sources": [
+      {
+        "label": "Authoritative source",
+        "url": "https://www.microsoft.com/en-us/microsoft-agent-365"
+      }
+    ]
+  },
+  {
     "title": "Bluesky",
     "id": "bluesky",
     "incorrect": [
@@ -69,6 +86,25 @@
       {
         "label": "Authoritative source",
         "url": "https://www.microsoft.com/microsoft-copilot"
+      }
+    ]
+  },
+  {
+    "title": "Cowork",
+    "id": "cowork",
+    "incorrect": [
+      "CoWork"
+    ],
+    "reason": [
+      "Because you didn't learn from Copilot, you've decided to continue with Cowork."
+    ],
+    "notes": [
+      "Applies to both Claude Cowork and Copilot Cowork."
+    ],
+    "sources": [
+      {
+        "label": "Authoritative source",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/"
       }
     ]
   },
