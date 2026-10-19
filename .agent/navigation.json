@@ -15,7 +15,7 @@
   },
   "start_here": {
     "readme": "README.md",
-    "agents_md": null,
+    "agents_md": "AGENTS.md",
     "entry_points": [],
     "decision_records": [],
     "build_config": [
@@ -361,8 +361,8 @@
     "tracked_files_only": true
   },
   "generated": {
-    "source_commit": "0ed412339e81105065e6462080a6f686d9ee8d6c",
-    "content_hash": "071622121aa6b0d2",
+    "source_commit": "362c2a80430c1fbb251d6ed8e21affe11424f14f",
+    "content_hash": "3472e5e8e435492f",
     "generator": "navgen"
   }
 }
