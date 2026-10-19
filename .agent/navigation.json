@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0",
+  "repository": "LetMeCorrectThatForYou",
+  "identity": {
+    "description": "A polite public service for those moments when a product name, spelling, capitalisation, or bit of terminology is almost right.",
+    "default_branch": "main",
+    "languages": {
+      "Astro": 6,
+      "JavaScript": 3,
+      "TypeScript": 3
+    },
+    "topics": [],
+    "licence": "",
+    "file_count": 48
+  },
+  "start_here": {
+    "readme": "README.md",
+    "agents_md": null,
+    "entry_points": [],
+    "decision_records": [],
+    "build_config": [
+      "package.json",
+      "tsconfig.json"
+    ],
+    "source_roots": [
+      "src",
+      "scripts",
+      "."
+    ]
+  },
+  "documentation": [
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "title": "Pull Request Template",
+      "lines": 10,
+      "headings": [
+        {
+          "level": 2,
+          "text": "What does this correct?",
+          "anchor": "what-does-this-correct"
+        },
+        {
+          "level": 2,
+          "text": "Checklist",
+          "anchor": "checklist"
+        }
+      ]
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "title": "Contributing corrections",
+      "lines": 31,
+      "headings": [
+        {
+          "level": 2,
+          "text": "Suggest without writing code",
+          "anchor": "suggest-without-writing-code"
+        },
+        {
+          "level": 2,
+          "text": "Submit a pull request",
+          "anchor": "submit-a-pull-request"
+        }
+      ]
+    },
+    {
+      "path": "README.md",
+      "title": "Let me correct that for you!",
+      "lines": 16,
+      "headings": [
+        {
+          "level": 2,
+          "text": "Suggest a correction",
+          "anchor": "suggest-a-correction"
+        },
+        {
+          "level": 2,
+          "text": "Project information",
+          "anchor": "project-information"
+        }
+      ]
+    },
+    {
+      "path": "TECHNICAL.md",
+      "title": "Technical information",
+      "lines": 42,
+      "headings": [
+        {
+          "level": 2,
+          "text": "Architecture",
+          "anchor": "architecture"
+        },
+        {
+          "level": 2,
+          "text": "Local development",
+          "anchor": "local-development"
+        },
+        {
+          "level": 2,
+          "text": "Content model",
+          "anchor": "content-model"
+        },
+        {
+          "level": 2,
+          "text": "Repositories",
+          "anchor": "repositories"
+        },
+        {
+          "level": 2,
+          "text": "Azure Static Web Apps",
+          "anchor": "azure-static-web-apps"
+        },
+        {
+          "level": 2,
+          "text": "Future custom-domain cutover",
+          "anchor": "future-custom-domain-cutover"
+        }
+      ]
+    },
+    {
+      "path": "docs/specs/static-site-migration.md",
+      "title": "Static site migration specification",
+      "lines": 32,
+      "headings": [
+        {
+          "level": 2,
+          "text": "Goal",
+          "anchor": "goal"
+        },
+        {
+          "level": 2,
+          "text": "Approved experience",
+          "anchor": "approved-experience"
+        },
+        {
+          "level": 2,
+          "text": "Acceptance criteria",
+          "anchor": "acceptance-criteria"
+        },
+        {
+          "level": 2,
+          "text": "Non-goals",
+          "anchor": "non-goals"
+        }
+      ]
+    },
+    {
+      "path": "src/content/corrections/agent365.md",
+      "title": "Agent365",
+      "lines": 12,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/bluesky.md",
+      "title": "Bluesky",
+      "lines": 12,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/clipchamp.md",
+      "title": "Clipchamp",
+      "lines": 12,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/cloudflare.md",
+      "title": "Cloudflare",
+      "lines": 12,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/copilot.md",
+      "title": "Copilot",
+      "lines": 16,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/cowork.md",
+      "title": "Cowork",
+      "lines": 13,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/entraid.md",
+      "title": "Entraid",
+      "lines": 14,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/intune.md",
+      "title": "Intune",
+      "lines": 13,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/on-premises.md",
+      "title": "On Premises",
+      "lines": 16,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/onedrive.md",
+      "title": "Onedrive",
+      "lines": 15,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/onenote.md",
+      "title": "Onenote",
+      "lines": 13,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/powerapps.md",
+      "title": "Powerapps",
+      "lines": 12,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/powerbi.md",
+      "title": "Powerbi",
+      "lines": 15,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/powerfx.md",
+      "title": "Powerfx",
+      "lines": 14,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/powerpoint.md",
+      "title": "Powerpoint",
+      "lines": 12,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/powershell.md",
+      "title": "Powershell",
+      "lines": 13,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/sharepoint.md",
+      "title": "Sharepoint",
+      "lines": 14,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/team.md",
+      "title": "Team",
+      "lines": 13,
+      "headings": []
+    },
+    {
+      "path": "src/content/corrections/windowsautopilot.md",
+      "title": "Windowsautopilot",
+      "lines": 13,
+      "headings": []
+    }
+  ],
+  "code": {
+    "source_roots": [
+      "src",
+      "scripts",
+      "."
+    ],
+    "symbol_source": "repomix (tree-sitter signatures)",
+    "routes": [
+      "src/pages/404.astro",
+      "src/pages/about.astro",
+      "src/pages/index.astro"
+    ],
+    "files": [
+      {
+        "path": "scripts/preview-server.mjs",
+        "symbols": [
+          {
+            "kind": "const",
+            "name": "resolve",
+            "parent": "",
+            "signature": "const resolve = async (pathname) =>"
+          }
+        ]
+      },
+      {
+        "path": "scripts/validate-content.mjs",
+        "symbols": [
+          {
+            "kind": "const",
+            "name": "fail",
+            "parent": "",
+            "signature": "const fail = (message) =>"
+          }
+        ]
+      },
+      {
+        "path": "src/components/AlphabetFilter.astro",
+        "symbols": [
+          {
+            "kind": "interface",
+            "name": "Props",
+            "parent": "",
+            "signature": "interface Props { available: string[]; total: number; }"
+          }
+        ]
+      },
+      {
+        "path": "src/components/CorrectionCard.astro",
+        "symbols": [
+          {
+            "kind": "interface",
+            "name": "Source",
+            "parent": "",
+            "signature": "interface Source { label: string; url: string; }"
+          },
+          {
+            "kind": "interface",
+            "name": "Props",
+            "parent": "",
+            "signature": "interface Props { title: string; anchor: string; incorrect: string[]; reasons: string[]; notes: string[]; sources: Source[]; }"
+          }
+        ]
+      },
+      {
+        "path": "src/layouts/BaseLayout.astro",
+        "symbols": [
+          {
+            "kind": "interface",
+            "name": "Props",
+            "parent": "",
+            "signature": "interface Props { title?: string; description?: string; current?: 'corrections' | 'about'; }"
+          }
+        ]
+      },
+      {
+        "path": "src/pages/index.astro",
+        "symbols": [
+          {
+            "kind": "const",
+            "name": "corrections",
+            "parent": "",
+            "signature": "const corrections = (await getCollection('corrections')).sort((a, b) => a.data.title.localeCompare(b.data.title));"
+          }
+        ]
+      }
+    ]
+  },
+  "tests": [
+    "tests/site.spec.ts"
+  ],
+  "operations": [
+    ".gitea/workflows/ci.yml",
+    ".github/workflows/azure-static-web-apps.yml"
+  ],
+  "limitations": {
+    "unparsed_languages": [],
+    "excluded_dirs": [],
+    "code_map_truncated": false,
+    "code_map_symbols_capped": false,
+    "tracked_files_only": true
+  },
+  "generated": {
+    "source_commit": "0ed412339e81105065e6462080a6f686d9ee8d6c",
+    "content_hash": "071622121aa6b0d2",
+    "generator": "navgen"
+  }
+}
