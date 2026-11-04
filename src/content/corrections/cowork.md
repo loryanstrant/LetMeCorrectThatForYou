@@ -3,6 +3,7 @@ title: "Cowork"
 anchor: "cowork"
 incorrect:
   - "CoWork"
+  - "Co-work"
 reasons:
   - "Because you didn't learn from Copilot, you've decided to continue with Cowork."
 notes:
