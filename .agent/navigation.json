@@ -177,7 +177,7 @@
     {
       "path": "src/content/corrections/cowork.md",
       "title": "Cowork",
-      "lines": 13,
+      "lines": 14,
       "headings": []
     },
     {
@@ -361,8 +361,8 @@
     "tracked_files_only": true
   },
   "generated": {
-    "source_commit": "362c2a80430c1fbb251d6ed8e21affe11424f14f",
-    "content_hash": "3472e5e8e435492f",
+    "source_commit": "ef158d5a311205b38df6022844a8089e03e66fab",
+    "content_hash": "ec12550297748fe2",
     "generator": "navgen"
   }
 }
